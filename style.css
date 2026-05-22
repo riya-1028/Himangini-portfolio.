@@ -1,0 +1,387 @@
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: black;
+    color: white;
+}
+
+/* HEADER */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* LOGO */
+
+.logo{
+    font-size: 3rem;
+    color: #3760e6;
+    font-weight: 800;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+/* NAVBAR */
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #3760e6;
+    border-bottom: 3px solid#3760e6;
+}
+
+/* DOWNLOAD CV BUTTON */
+
+.cv-btn{
+    border: 2px solid #3760e6;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.cv-btn:hover{
+    background: #3760e6;
+    color: black;
+}
+
+/* HOME */
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    padding: 10rem 9% 5rem;
+}
+
+/* IMAGE */
+
+.home-img img{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #3760e6;
+    transition: 0.3s ease;
+}
+
+.home-img img:hover{
+    transform: scale(1.05);
+}
+
+/* CONTENT */
+
+.home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.home-content span{
+    color: #3760e6;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* TYPING EFFECT */
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Web Developer";
+    color: #3760e6;
+    animation: words 9s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    border-left: 3px solid #3760e6;
+    right: -8px;
+    animation: cursor .6s infinite;
+    background: black;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid white;
+    }
+}
+
+@keyframes words{
+
+    0%, 33%{
+        content: "Web Developer";
+    }
+
+    34%, 66%{
+        content: "Web Designer";
+    }
+
+    67%, 100%{
+        content: "Frontend Developer";
+    }
+}
+
+/* SOCIAL ICONS */
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 2px solid #3760e6;
+    border-radius: 50%;
+    color: #3760e6;
+    margin: 3rem 1rem 3rem 0;
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover{
+    background: #3760e6;
+    color: black;
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #3760e6
+}
+
+/* BUTTON */
+
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 4rem;
+    border: 2px solid #3760e6;
+    color: #3760e6;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    background: #3760e6;
+    color: black;
+    box-shadow: 0 0 25px #3760e6;
+}
+
+/* SERVICES */
+
+.services,
+.skills,
+.contact{
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+    color: #3760e6;
+}
+
+/* SERVICE BOX */
+
+.service-container{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.service-box{
+    width: 300px;
+    padding: 3rem;
+    background: #111;
+    border-radius: 2rem;
+    border: 2px solid #3760e6;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.service-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #3760e6;
+}
+
+.service-box i{
+    font-size: 5rem;
+    color: #3760e6;
+    margin-bottom: 2rem;
+}
+
+.service-box h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-box p{
+    font-size: 1.5rem;
+}
+
+/* SKILLS */
+
+.skills-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill-box{
+    padding: 2rem 4rem;
+    border: 2px solid #3760e6;
+    border-radius: 1rem;
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+
+.skill-box:hover{
+    background: #3760e6;
+    color: black;
+}
+
+/* CONTACT */
+
+.contact form{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact form input,
+.contact form textarea{
+    padding: 1.5rem;
+    background: #111;
+    border: 2px solid #3760e6;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:995px){
+
+    .home{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-content h3{
+        font-size: 3rem;
+    }
+
+    .home-img img{
+        width: 220px;
+        height: 220px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home{
+        padding-top: 15rem;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .home-content h1{
+        font-size: 4rem;
+    }
+
+    .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-img img{
+        width: 180px;
+        height: 180px;
+    }
+
+}
